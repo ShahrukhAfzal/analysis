@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+td,th{
+font-weight: bold;
+    vertical-align: inherit;
+	text-align:center;
+border: 1px solid black;
+margin: 3px;
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+
+p.indent{ padding-left: 1.8em }
+</style>
+</head>
+<body>
+
+
+<div class="sticky" style="border: 15px SOLID grey" >
+  <center>
+<form action="python_table.py" method="post" >
+<div class="form-group" >
+
+  <h4>
+      <b>   SESSION YEAR: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; BRANCH:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SEMESTER:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            SECTION:           &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;            &nbsp;&nbsp;SUBJECT CODE:   </h4> </b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input type="text"   placeholder="e.g 16 or 17 or 18" name="session" size="13" min="1" max="2" required>
+&nbsp;&nbsp;&nbsp;     &nbsp;&nbsp;&nbsp;   <input type="text"   placeholder="e.g 10 for CS " name="branch" size="15" required>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;<input type="text"  placeholder="e.g 1 or 2 or 3 etc" name="sem" required>
+                <input type="text"placeholder="e.g 'A' or 'B' etc" name="section" required>
+   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text"   placeholder="e.g. 'RAS201' or 'REC301' " name="subject"  REQUIRED>
+    </div>   <button type="submit" class="btn btn-default">Fetch Data</button>&nbsp;&nbsp;&nbsp;&nbsp; <button type="Reset" class="btn btn-default">Reset</button>
+  </form>
+  <hr>
+  <h5><b>1. Enter SESSION YEAR AS 15,16,17 and so no where 15 is starting of roll no 15133 and 16 is 16133 and so on.
+  <br><br>2. Enter BRANCH Code as 10 for CSE, 11 for IT and so on.
+  <br><br>3. Enter SUBJECT CODE as NCS001,NCS701 and so on.  
+  </h5></b>
+</div>
+
+</center>
+<br>
+<hr><hr>
+<br>
+<div style="border: 15px SOLID grey">
+<table width="100%">
+<center>
+<tr>
+<th>SR. NO.</th> <th >ROLL. NO.</th> <th width="300">NAME</th> <th >SECTION</th><th >EXTERNAL</th> <th>INTERNAL</th>
+<tr>
+</table>
+ </div>
+</body>
+</html> 
+

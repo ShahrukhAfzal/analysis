@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+    <title>Enter url</title>
+</head>
+<body background-image="Aktu_logo.png" style="background-color:">
+
+<center>
+<br><br><br><br>
+
+    <div class="form" style="background-color:">
+        <h1> Have a great day!!!</h1>
+        <h4 style="font-family: sans-serif">Please ensure you must have internet connection</h4>
+        <button style="width: 230px; height:30px"><a href="https://erp.aktu.ac.in/WebPages/OneView/OneView.aspx" onclick="window.open('https://erp.aktu.ac.in/WebPages/OneView/OneView.aspx','newwindow','width=400,height=700');return false;">CLICK TO OPEN AKTU WEBSITE</a></button>
+        <br><br>
+
+        <!-- form action="data_fetching_demo.py " method="post"align="center" -->
+        <form action = "demo.php" method="post" align="center">
+            <input type="text"                                                       style="width: 230px; height:30px" placeholder="Please enter the copied URL of your result" name="url" required pattern=".{100,150}">
+          <br><br>  <b style="color: powderblue ; font-size: 40px">A</b><input type="radio" value="A" name = "section" required> <b style="color: mediumspringgreen; font-size: 40px">B</b><input type="radio" value="B" name = "section"> <b style="color: saddlebrown; font-size: 40px">C</b><input type="radio" value="C" name = "section"> <b style="color: khaki; font-size: 40px">D</b><input type="radio" value="D" name = "section">
+            <br><br><button style="width: 230px; height:30px">Fetch Data</button>
+        </form>
+<br><br>
+        <form class="fetch data" action="fetchdata.html"><br>
+        <button style="width: 230px; height:30px">View Result</button>
+        </form>
+    </div>
+</center>
+</body>
+</html>
