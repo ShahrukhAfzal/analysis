@@ -24,51 +24,35 @@ def personal_data(arg):
     return roll_no, name, branch, gender, course, college
 
 
-def sem_data(arg):
+
+def sem_data(raw_data):
     a = []
-    for i in range(8, len(arg), 7):
-        a.append(arg[i])
-    for j in range(11, len(arg), 7):
-        a.append(arg[j])
+    for i in range(7, len(raw_data), 7):
+        a.append(raw_data[i])
+    for j in range(10, len(raw_data), 7):
+        a.append(raw_data[j])
     return a
 
-
-
 def final_sem(raw_sem):
-    z = []
-    sem1 = 0
-    sem2 = 0
-    sem3 = 0
-    sem4 = 0
-    sem5 = 0
-    sem6 = 0
-    sem7 = 0
-    sem8 = 0
-    for j in range(len(raw_sem) - 1):
-        if ((raw_sem[j][0][5][3]) == '1'):
+    z = list()
+    for j in range(len(raw_sem)):
+        if ((raw_sem[j][0][5][3]) == '1' or (raw_sem[j][0][4][3]) == '1'):
             sem1 = (raw_sem[j])
-
-        elif ((raw_sem[j][0][5][3]) == '2'):
+        elif ((raw_sem[j][0][5][3]) == '2' or (raw_sem[j][0][4][3]) == '2'):
             sem2 = (raw_sem[j])
-            #
-        elif ((raw_sem[j][0][5][3]) == '3'):
+        elif ((raw_sem[j][0][5][3]) == '3' or (raw_sem[j][0][4][3]) == '3'):
             sem3 = (raw_sem[j])
-            # z.append(sem3)
-        elif ((raw_sem[j][0][5][3]) == '4'):
+        elif ((raw_sem[j][0][5][3]) == '4' or (raw_sem[j][0][4][3]) == '4'):
             sem4 = (raw_sem[j])
-            # z.append(sem4)
-        elif ((raw_sem[j][0][5][3]) == '5'):
+        elif ((raw_sem[j][0][5][3]) == '5' or (raw_sem[j][0][4][3]) == '5'):
             sem5 = (raw_sem[j])
-            # z.append(sem5)
-        elif ((raw_sem[j][0][5][3]) == '6'):
+        elif ((raw_sem[j][0][5][3]) == '6' or (raw_sem[j][0][4][3]) == '6'):
             sem6 = (raw_sem[j])
-            # z.append(sem6)
-        elif ((raw_sem[j][0][5][3]) == '7'):
+        elif ((raw_sem[j][0][5][3]) == '7' or (raw_sem[j][0][4][3]) == '7'):
             sem7 = (raw_sem[j])
-            # z.append(sem7)
-        elif ((raw_sem[j][0][5][3]) == '8'):
+        elif ((raw_sem[j][0][5][3]) == '8' or (raw_sem[j][0][4][3]) == '8'):
             sem8 = (raw_sem[j])
-            # z.append(sem8)
+
     try:
         if len(sem1) != 1:
             z.append(sem1)
@@ -110,6 +94,8 @@ def final_sem(raw_sem):
     except:
         pass
     return z
+
+
 
 
 #print("Wait!!! Data is being loaded\n\n")
